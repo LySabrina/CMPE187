@@ -30,8 +30,6 @@ public class GumballMachine {
         else{
             System.out.println( "Not enough currency. Please input at least 10 cents");
         }
-
-
     }
 
     public void dispenseRed(){
@@ -47,9 +45,10 @@ public class GumballMachine {
 
     }
 
-    public void insert(String coin){
+    public boolean insert(String coin){
         if(!VALID_COINS.contains(coin.toLowerCase())){
             System.out.println("Returning Invalid " + coin);
+            return false;
         }
         else{
             switch (coin.toLowerCase()){
@@ -67,17 +66,50 @@ public class GumballMachine {
                     break;
             }
         }
+        return true;
     }
 
-    public void returnChange(){
+    public int returnChange(){
         if(inputtedCurrency == 0){
-            System.out.println("There is no coins inside. Returning 0 cents");
-
+            return -1;
         }
         else{
-            System.out.println("Returning coins: " + String.valueOf(inputtedCurrency));
+            int ic  = inputtedCurrency;
             inputtedCurrency = 0;
+             return ic;
         }
+    }
+
+    // ---------
+    // @test
+    public void testReturnQuarter()
+    {
+        if ( this.insert("quarter") == false )
+        {
+            System.out.println( "TestReturnQuarter: Failed insert" );
+            return;
+        }
+
+        int change  = this.returnChange();
+        if ( change == 25 )
+        {
+            System.out.println( "TestReturnQuarter: Passed");
+        }
+        else
+        {
+            System.out.println( "TestReturnQuarter: Failed change="+change);
+        }
+    }
+
+    public void testInsertDollar()
+    {
+        if ( this.insert("dollar") == false )
+        {
+            System.out.println( "TestReturnQuarter: Failed insert dollar" );
+            return;
+        }
+
+        System.out.println( "TestReturnDollar: Passed");
     }
 
 }
