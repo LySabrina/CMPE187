@@ -39,6 +39,11 @@ public class MainTester {
 
                 gumballMachine.testReturnQuarter();
                 gumballMachine.testInsertDollar();
+                gumballMachine.testNickelDispenseRed();
+                gumballMachine.testDimeInsertion();
+                gumballMachine.testQuarterDispenseTwoYellow();
+                gumballMachine.testDimeDispenseTwoRed();
+                gumballMachine.testDispensingRedandYellow();
                 break;
             }
             System.out.println("1) Insert Coin 2) Red Lever 3) Yellow Lever 4) Change Lever 5) Exit");
