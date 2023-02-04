@@ -91,8 +91,58 @@ public class GumballMachine {
 
     // ---------
     // @test
+    public void testReturnNickel()
+    {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
+        if ( this.insert("nickel") == false )
+        {
+            System.out.println( "testReturnNickel: Failed insert" );
+            return;
+        }
+
+        int change  = this.returnChange();
+        if ( change == 5 )
+        {
+            System.out.println( "testReturnNickel: Passed");
+        }
+        else
+        {
+            System.out.println( "testReturnNickel: Failed change="+change);
+        }
+    }
+
+    public void testReturnDime()
+    {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
+        if ( this.insert("dime") == false )
+        {
+            System.out.println( "testReturnDime: Failed insert" );
+            return;
+        }
+
+        int change  = this.returnChange();
+        if ( change == 10 )
+        {
+            System.out.println( "testReturnDime: Passed");
+        }
+        else
+        {
+            System.out.println( "testReturnDime: Failed change="+change);
+        }
+    }
+
     public void testReturnQuarter()
     {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
         if ( this.insert("quarter") == false )
         {
             System.out.println( "TestReturnQuarter: Failed insert" );
@@ -112,17 +162,40 @@ public class GumballMachine {
 
     public void testInsertDollar()
     {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
         if ( this.insert("dollar") == false )
         {
-            System.out.println( "testInsertDollar: Failed insert dollar" );
+            System.out.println( "testInsertDollar: Passed: Failed insert dollar" );
             return;
         }
 
         System.out.println( "TestReturnDollar: Passed");
     }
 
+    public void testInsertPenny()
+    {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
+        if ( this.insert("penny") == false )
+        {
+            System.out.println( "testInsertPenny: Passed: Failed insert penny" );
+            return;
+        }
+
+        System.out.println( "testInsertPenny: Passed");
+    }
+
     public void testNickelDispenseRed()
     {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
         if ( this.insert("nickel") == false )
         {
             System.out.println( "testNickelDispenseRed: Failed insert" );
@@ -142,6 +215,10 @@ public class GumballMachine {
 
     public void testDimeInsertion()
     {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
         if ( this.insert("dime") & this.insert("dime") & this.insert("dime") == false )
         {
             System.out.println( "testDimeInsertion: Failed insert dime" );
@@ -153,6 +230,7 @@ public class GumballMachine {
 
     public void testQuarterDispenseTwoYellow()
     {
+        inputtedCurrency = 0;
         dispensedYellow = 0;
         dispensedRed = 0;
 
@@ -175,6 +253,7 @@ public class GumballMachine {
 
     public void testDimeDispenseTwoRed()
     {
+        inputtedCurrency = 0;
         dispensedYellow = 0;
         dispensedRed = 0;
 
@@ -197,6 +276,7 @@ public class GumballMachine {
 
     public void testDispensingRedandYellow()
     {
+        inputtedCurrency = 0;
         dispensedYellow = 0;
         dispensedRed = 0;
 
@@ -216,6 +296,61 @@ public class GumballMachine {
             System.out.println( "testDispensingRedandYellow: Failed dispense=" + Gumball);
         }
     }
-    
+
+    public void testInsufficientCurrency()
+    {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
+        if ( this.insert("nickel") == false )
+        {
+            System.out.println( "testInsufficientCurrency: Failed insert" );
+            return;
+        }
+
+        int yellowGumball  = this.dispenseYellow();
+        if ( dispensedYellow == 0 )
+        {
+            System.out.println( "testInsufficientCurrency: Passed");
+        }
+        else
+        {
+            System.out.println( "testInsufficientCurrency: Failed dispense="+yellowGumball);
+        }
+    }
+
+    public void testInsertQuarterDispenseRedReturnChange()
+    {
+        inputtedCurrency = 0;
+        dispensedYellow = 0;
+        dispensedRed = 0;
+
+        if ( this.insert("quarter") == false )
+        {
+            System.out.println( "testInsertQuarterDispenseRedReturnChange: Failed insert" );
+            return;
+        }
+
+        int redGumball  = this.dispenseRed();
+        if ( redGumball == 1 )
+        {
+            System.out.println( "testInsertQuarterDispenseRedReturnChange: Passed");
+        }
+        else
+        {
+            System.out.println( "testInsertQuarterDispenseRedReturnChange: Failed dispense="+redGumball);
+        }
+
+        int change  = this.returnChange();
+        if ( change == 20 )
+        {
+            System.out.println( "testInsertQuarterDispenseRedReturnChange: Passed");
+        }
+        else
+        {
+            System.out.println( "testInsertQuarterDispenseRedReturnChange: Failed change="+change);
+        }
+    }   
 
 }

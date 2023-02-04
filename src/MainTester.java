@@ -37,13 +37,18 @@ public class MainTester {
             else if(input.equals("T")){
                 System.out.println("Run tests...");
 
+                gumballMachine.testReturnNickel();
+                gumballMachine.testReturnDime();
                 gumballMachine.testReturnQuarter();
                 gumballMachine.testInsertDollar();
+                gumballMachine.testInsertPenny();
                 gumballMachine.testNickelDispenseRed();
                 gumballMachine.testDimeInsertion();
                 gumballMachine.testQuarterDispenseTwoYellow();
                 gumballMachine.testDimeDispenseTwoRed();
                 gumballMachine.testDispensingRedandYellow();
+                gumballMachine.testInsufficientCurrency();
+                gumballMachine.testInsertQuarterDispenseRedReturnChange();
                 break;
             }
             System.out.println("1) Insert Coin 2) Red Lever 3) Yellow Lever 4) Change Lever 5) Exit");
