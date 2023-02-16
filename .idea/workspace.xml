@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="21366b4c-a969-481b-b1cb-1234ad021393" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ControlFlow/Scholarship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControlFlow/Scholarship_Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControlFlow/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GumballMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GumballMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gumball-machine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gumball-machine.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/sabrinaly/Documents/CMPE187",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,6 +61,8 @@
       <updated>1675395068381</updated>
       <workItem from="1675395071293" duration="2673000" />
       <workItem from="1675466799285" duration="1985000" />
+      <workItem from="1676513457828" duration="208000" />
+      <workItem from="1676589721991" duration="1539000" />
     </task>
     <servers />
   </component>
